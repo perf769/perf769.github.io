@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Дома у Брянска для компании 2026</title>
+    <meta
+      name="description"
+      content="Анализ доступных домов и коттеджей у Брянска на 31 июля - 2 августа 2026 для 15 человек."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="К началу отчета">
+        <span class="brand-mark"></span>
+        <span>Брянск 2026</span>
+      </a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#top-list">ТОП</a>
+        <a href="#compare">Сравнение</a>
+        <a href="#excluded">Исключено</a>
+        <a href="#vote">Голосование</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="decision">
+        <div class="decision-copy">
+          <p class="eyebrow">Проверено 04.07.2026</p>
+          <h1>Куда ехать компанией 15 человек у Брянска</h1>
+          <p class="lead" id="core-conclusion">
+            Загружаю анализ...
+          </p>
+          <div class="metric-grid" aria-label="Ключевые вводные">
+            <article>
+              <span>Даты</span>
+              <strong>31.07 - 02.08</strong>
+              <small>или 01.08 - 02.08</small>
+            </article>
+            <article>
+              <span>Компания</span>
+              <strong>15 мест</strong>
+              <small>13 взрослых + 2 ребенка</small>
+            </article>
+            <article>
+              <span>Лучший fit</span>
+              <strong id="best-fit">Святобор</strong>
+              <small>загородный формат</small>
+            </article>
+          </div>
+          <div class="decision-actions">
+            <a class="button primary" href="#vote">Проголосовать</a>
+            <a class="button ghost" href="#compare">Сравнить варианты</a>
+          </div>
+        </div>
+        <figure class="decision-media">
+          <img
+            src="assets/screenshots/svyatobor.jpg"
+            alt="Скриншот карточки экопарка Святобор"
+          />
+          <figcaption>
+            <span>Рекомендация</span>
+            <strong>Экопарк Святобор</strong>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="recommendation section-band">
+        <div class="section-head">
+          <p class="eyebrow">Итог</p>
+          <h2>Реально хороший вариант один, остальное - компромиссы</h2>
+        </div>
+        <div class="recommendation-grid" id="recommendation-grid"></div>
+      </section>
+
+      <section class="section" id="top-list">
+        <div class="section-head">
+          <p class="eyebrow">ТОП</p>
+          <h2>Доступные варианты</h2>
+        </div>
+        <div class="filters" role="tablist" aria-label="Фильтр вариантов">
+          <button class="filter is-active" data-filter="all" type="button">Все</button>
+          <button class="filter" data-filter="verified_full" type="button">На всю группу</button>
+          <button class="filter" data-filter="verified_compromise" type="button">Компромиссы</button>
+          <button class="filter" data-filter="fallback_1n" type="button">1 ночь</button>
+        </div>
+        <div class="option-grid" id="option-grid"></div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="section-head">
+          <p class="eyebrow">Цифры</p>
+          <h2>Сравнение по цене и риску</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Вариант</th>
+                <th>Формат</th>
+                <th>Вместимость</th>
+                <th>Цена</th>
+                <th>Отзывы</th>
+                <th>Вывод</th>
+              </tr>
+            </thead>
+            <tbody id="compare-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="excluded">
+        <div class="section-head">
+          <p class="eyebrow">Проверено</p>
+          <h2>Почему часть красивых вариантов не попала в ТОП</h2>
+        </div>
+        <div class="excluded-list" id="excluded-list"></div>
+      </section>
+
+      <section class="section-band method">
+        <div class="section-head">
+          <p class="eyebrow">Методика</p>
+          <h2>Как считались места и цены</h2>
+        </div>
+        <div class="method-grid">
+          <article>
+            <strong>15 мест в расчете</strong>
+            <p>Дети посчитаны как полноценные места, потому что возраст не указан.</p>
+          </article>
+          <article>
+            <strong>Две проверки дат</strong>
+            <p>Основная: 31.07-02.08. Запасная: 01.08-02.08 с ночевкой около 8 человек.</p>
+          </article>
+          <article>
+            <strong>Цена по карточкам</strong>
+            <p>Доплаты за гостей, завтраки и сауны вынесены отдельно, если они были в описании.</p>
+          </article>
+          <article>
+            <strong>Только подтверждаемое</strong>
+            <p>Карточки без онлайн-наличия или с блокировкой доступа не попали в список доступных.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section vote-section" id="vote">
+        <div class="section-head">
+          <p class="eyebrow">Выбор компании</p>
+          <h2>Голосование участников</h2>
+        </div>
+        <div class="vote-layout">
+          <form class="poll" id="poll-form">
+            <fieldset>
+              <legend id="poll-question">Какой вариант бронируем?</legend>
+              <div class="poll-options" id="poll-options"></div>
+            </fieldset>
+            <div class="voter-row">
+              <label>
+                Имя
+                <input id="voter-name" name="name" autocomplete="name" placeholder="Например, Андрей" />
+              </label>
+              <button class="button primary" type="submit">Отдать голос</button>
+            </div>
+            <p class="poll-note" id="poll-note">
+              Статический режим: голос сохраняется в этом браузере. Для реального учета подключается Telegram Login и backend.
+            </p>
+          </form>
+          <aside class="results" aria-live="polite">
+            <h3>Текущий расклад</h3>
+            <div id="poll-results"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Отчет собран по открытым карточкам агрегаторов и скринам проверок. Перед оплатой брони стоит финально подтвердить правила мероприятия и состав гостей у хозяина.</p>
+    </footer>
+
+    <script src="data/analysis.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
